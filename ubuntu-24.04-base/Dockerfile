@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 RUN apt update && \
   apt upgrade -y && \
-  apt install -y sudo tzdata && \
+  apt install -y sudo tzdata openssh-client && \
   apt clean && \
   ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
   echo "Asia/Tokyo" > /etc/timezone && \
